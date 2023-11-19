@@ -63,12 +63,15 @@ if (!is_really_writable(APPPATH . 'config/database.php')) {
     $requirement9 = "<span class='label label-success'><i class='fa fa-check-square-o'></i></span>";
 }
 
-if (!is_really_writable(FCPATH . 'temp')) {
+if (!is_dir(FCPATH . 'temp') || !is_really_writable(FCPATH . 'temp')) {
     $error_msg = true;
     $requirement10 = "<span class='label label-danger'><i class='fa fa-close'></i></span>";
+    echo 'Error: El directorio no es escribible o no existe: ' . FCPATH . 'temp';
 } else {
     $requirement10 = "<span class='label label-success'><i class='fa fa-check-square-o'></i></span>";
 }
+
+
 ?>
 
 <?php

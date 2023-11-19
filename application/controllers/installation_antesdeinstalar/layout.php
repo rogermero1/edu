@@ -160,16 +160,14 @@
                         <div class="left-side-tab <?php if ($requirements || $form == 2) {  echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
                             <i class="fa fa-list-ol"></i> <h5> Requirements</h5>
                         </div>
-                        <div class="left-side-tab <?php if ($purchase || $form == 3) {  echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
-                            <i class="fa fa-shopping-cart"></i> <h5> Purchase Code</h5>
-                        </div>
-                        <div class="left-side-tab <?php if ($database || $form == 4) {  echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
+                      
+                        <div class="left-side-tab <?php if ($database || $form == 3) {  echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
                             <i class="fa fa-database"></i> <h5> Database Info</h5>
                         </div>
-                        <div class="left-side-tab <?php if ($superadmin || $form == 5) { echo 'complete-bg'; } else {  echo 'in-complete-bg'; } ?>">
+                        <div class="left-side-tab <?php if ($superadmin || $form == 4) { echo 'complete-bg'; } else {  echo 'in-complete-bg'; } ?>">
                             <i class="fa fa-user"></i> <h5> Super Admin</h5>
                         </div>
-                        <div class="left-side-tab <?php if ($installation || $form == 6) { echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
+                        <div class="left-side-tab <?php if ($installation || $form == 5) { echo 'complete-bg'; } else { echo 'in-complete-bg'; } ?>">
                             <i class="fa fa-thumbs-o-up"></i> <h5> Complete!</h5>
                         </div>
                     </div><!--./col-md-3-->
@@ -193,19 +191,14 @@
                             
                             <?php }elseif ($form == 3) { ?>
                             
-                                <?php include_once('purchase.php');  ?> 
-                            
-                            
-                            <?php }elseif ($form == 4) { ?>
-                            
                                 <?php include_once('database.php');  ?> 
                             
                                                             
-                            <?php } else if ($form == 5) { ?>
+                            <?php } else if ($form == 4) { ?>
                                 
                                   <?php include_once('superadmin.php');  ?> 
                                 
-                            <?php } else if ($form == 6) { ?>
+                            <?php } else if ($form == 5) { ?>
                                 
                                 <h4>Installation Successful!</h4>
                                 <p>Due to security reasons you must delete the installation directory.</p>
@@ -221,7 +214,7 @@
         </div><!--./container-->
         </section>
         <script type="text/javascript">        
-            $("#purchase").validate();  
+           // $("#purchase").validate();  
             $("#dbform").validate();     
             $("#superadmin").validate();     
         </script>

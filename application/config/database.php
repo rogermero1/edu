@@ -90,8 +90,8 @@
                     'failover' => array(),
                     'save_queries' => TRUE
             );
-            $db['default']['hostname'] = '';
-            $db['default']['username'] = '';
+            $db['default']['hostname'] = 'localhost';
+            $db['default']['username'] = 'root';
             $db['default']['password'] = '';
-            $db['default']['database'] = '';
+            $db['default']['database'] = 'lms_20';
             
